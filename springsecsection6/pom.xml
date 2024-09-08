@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.eazybytes</groupId>
-    <artifactId>springsecsection5</artifactId>
+    <artifactId>springsecsection6</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springsecsection5</name>
-    <description>springsecsection5</description>
+    <name>springsecsection6</name>
+    <description>springsecsection6</description>
     <url/>
     <licenses>
         <license/>
