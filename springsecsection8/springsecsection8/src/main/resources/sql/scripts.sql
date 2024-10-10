@@ -30,3 +30,10 @@ insert into customer (email, pwd, role) values('happy@example.com', '{noop}EazyB
 insert into customer (email, pwd, role) values('admin@example.com',
                                                '{bcrypt}$2a$12$rcN9Y3prF2zUpRuD6w0CVOiblSUV5mGBYRS5
 .ExoT4crSFwNVZA7m', 'admin');
+
+
+# Start here
+drop table authorities;
+drop table customer;
+drop table users;
+
