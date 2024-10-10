@@ -67,7 +67,7 @@ public class ProjectSecurityConfig {
             }
         }));
 
-//        http.exceptionHandling(ehc -> ehc.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint())); //
+//        http.exceptionHandling(ehc -> ehc.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
         // It's a global config
         return http.build();
     }
