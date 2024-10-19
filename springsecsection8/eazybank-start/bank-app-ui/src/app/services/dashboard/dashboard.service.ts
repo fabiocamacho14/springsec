@@ -20,11 +20,11 @@ export class DashboardService {
   }
 
   getLoansDetails(id: number){
-    return this.http.get(environment.rooturl + AppConstants.LOANS_API_URL+ "?id="+id,{ observe: 'response',withCredentials: true });
+    return this.http.get(environment.rooturl + AppConstants.LOANS_API_URL+ "?customerId="+id,{ observe: 'response',withCredentials: true });
   }
 
   getCardsDetails(id: number){
-    return this.http.get(environment.rooturl + AppConstants.CARDS_API_URL+ "?id="+id,{ observe: 'response',withCredentials: true });
+    return this.http.get(environment.rooturl + AppConstants.CARDS_API_URL+ "?customerId="+id,{ observe: 'response',withCredentials: true });
   }
 
   getNoticeDetails(){

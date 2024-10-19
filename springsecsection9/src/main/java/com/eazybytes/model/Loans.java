@@ -33,7 +33,7 @@ public class Loans {
     @Column(name = "outstanding_amount", length = 11, nullable = false)
     private Integer outstandingAmount;
 
-    @Column(name = "creation_dt")
+    @Column(name = "create_dt")
     @CreationTimestamp
     private LocalDateTime creationDt;
 

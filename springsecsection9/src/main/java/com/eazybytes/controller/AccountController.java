@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequiredArgsConstructor
 public class AccountController {
 
+    @Autowired
     AccountsRepository accountsRepository;
 
     @GetMapping("/myAccount")
-    public Accounts getAccountDetails(@RequestParam Integer accountNumber) {
-        Optional<Accounts> accounts = accountsRepository.findByAccountNumber(accountNumber);
+    public Accounts getAccountDetails(@RequestParam Integer id) {
+        Optional<Accounts> accounts = accountsRepository.findByCustomerId(id);
         if (accounts.isPresent()) {
             return accounts.get();
         } else {

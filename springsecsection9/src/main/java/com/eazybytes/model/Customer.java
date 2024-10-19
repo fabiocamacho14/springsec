@@ -1,11 +1,13 @@
 package com.eazybytes.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -36,4 +38,10 @@ public class Customer {
     @Column(name = "create_dt")
     @CreationTimestamp
     private LocalDateTime create_dt;
+
+//    Relationships
+
+    @OneToMany(mappedBy = "customer",fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Authority> authorities;
 }

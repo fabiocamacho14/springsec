@@ -12,10 +12,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class EazyBankUserDetailsService implements UserDetailsService {
+public class  EazyBankUserDetailsService implements UserDetailsService {
 
     private final CustomerRepository customerRepository;
 
@@ -24,7 +25,9 @@ public class EazyBankUserDetailsService implements UserDetailsService {
         Customer customer = customerRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User details not found for the user: " + username));
 
-        List<GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority(customer.getRole()));
+        List<GrantedAuthority> authorities = customer.getAuthorities().stream()
+                .map(authority -> new SimpleGrantedAuthority(authority.getName())).collect(Collectors.toList());
+//        List<GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority(customer.getAuthorities()));
         return new User(customer.getEmail(), customer.getPwd(), authorities);
     }
 }
