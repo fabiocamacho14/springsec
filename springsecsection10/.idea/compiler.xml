@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springsecsection8" />
+        <module name="springsecsection10" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,11 +18,13 @@
       <module name="springsecsection5" target="17" />
       <module name="springsecsection6" target="17" />
       <module name="springsecsection7" target="17" />
+      <module name="springsecsection8" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springsecsection1" options="-parameters" />
+      <module name="springsecsection10" options="-parameters" />
       <module name="springsecsection2" options="-parameters" />
       <module name="springsecsection3" options="-parameters" />
       <module name="springsecsection4" options="-parameters" />
