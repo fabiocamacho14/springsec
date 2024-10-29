@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springsecsection11" />
+        <module name="springsecsection12" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springsecsection1" target="17" />
       <module name="springsecsection10" target="17" />
+      <module name="springsecsection11" target="17" />
       <module name="springsecsection2" target="17" />
       <module name="springsecsection3" target="17" />
       <module name="springsecsection4" target="17" />
@@ -27,6 +28,7 @@
       <module name="springsecsection1" options="-parameters" />
       <module name="springsecsection10" options="-parameters" />
       <module name="springsecsection11" options="-parameters" />
+      <module name="springsecsection12" options="-parameters" />
       <module name="springsecsection2" options="-parameters" />
       <module name="springsecsection3" options="-parameters" />
       <module name="springsecsection4" options="-parameters" />
